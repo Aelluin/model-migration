@@ -24,4 +24,12 @@ class Student extends Model
     ];
 
    // protected $guarded = []; (not advisable to do)
+
+    protected $appends = ['fullname'];
+    public function getFullnameAttribute()
+    {
+        return $this->fname .' '. $this->lname;
+        
+    }
+
 }
