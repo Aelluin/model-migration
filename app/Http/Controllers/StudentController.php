@@ -77,7 +77,19 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $student = new Student();
+        $student->fname = $request['fname'];
+        $student->lname = $request['lname'];
+        $student->email = $request['email'];
+        $student->phone = $request['phone'];
+        $student->address = $request['address'];
+        $student->city = $request['city'];
+        $student->province = $request['province'];
+        $student->zip = $request['zip'];
+        $student->birthdate = $request['birthdate'];
+        $student->save();
+
+        return redirect()-back();
     }
 
     /**
@@ -108,7 +120,19 @@ class StudentController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $student = Student::find($id);
+        $student->fname = $request['fname'];
+        $student->lname = $request['lname'];
+        $student->email = $request['email'];
+        $student->phone = $request['phone'];
+        $student->address = $request['address'];
+        $student->city = $request['city'];
+        $student->province = $request['province'];
+        $student->zip = $request['zip'];
+        $student->birthdate = $request['birthdate'];
+        $student->save();
+
+        return redirect()-back();
     }
 
     /**
@@ -116,7 +140,8 @@ class StudentController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $student = Student::find($id);
+        $student->delete();
     }
 
     
