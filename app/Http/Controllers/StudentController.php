@@ -89,6 +89,10 @@ class StudentController extends Controller
         $student->birthdate = $request['birthdate'];
         $student->save();
 
+<<<<<<< HEAD
+=======
+        return redirect()-back();
+>>>>>>> 7d9dc3c26568ae5f62dbc6cb6a26ea11b56d591d
     }
 
     /**
@@ -130,6 +134,11 @@ class StudentController extends Controller
         $student->zip = $request['zip'];
         $student->birthdate = $request['birthdate'];
         $student->save();
+<<<<<<< HEAD
+=======
+
+        return redirect()-back();
+>>>>>>> 7d9dc3c26568ae5f62dbc6cb6a26ea11b56d591d
     }
 
     /**
